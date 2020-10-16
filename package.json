@@ -11,7 +11,6 @@
         "lint": "eslint src",
         "postmerge": "npm install",
         "postrewrite": "npm install",
-        "precommit": "npm run lint",
         "prepush": "npm run test",
         "start": "npm run clean & SET NODE_ENV=development SET BABEL_ENV=development && babel-node src/server",
         "start-analyzer": "npm run clean && SET NODE_ENV=development SET BABEL_ENV=development SET ANALYZER=true && babel-node src/server",

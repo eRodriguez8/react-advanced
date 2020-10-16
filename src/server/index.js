@@ -17,7 +17,7 @@ import webpackConfig from '../../webpack.config';
 // import clientRender from './clientRender';
 
 // API
-// import api from './api';
+import api from './api';
 
 // Environment
 // const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -47,7 +47,7 @@ app.use(webpackDevMiddleware(compiler));
 app.use(webpackHotMiddleware(compiler.compilers.find(compiler => compiler.name === 'client')));
 
 // API Middleware
-// app.use('/api', api);
+app.use('/api', api);
 
 // Device Detection
 // app.use((req, res, next) => {
