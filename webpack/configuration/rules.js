@@ -10,7 +10,20 @@ import pkg from '../../package.json';
 export default type => {
 	const rules = [{
 		test: /\.js$/,
-		use: 'babel-loader',
+        use: {
+            loader: 'babel-loader',
+            query: {
+                presets: [
+                    [
+                        'env', {
+                            modules: false,
+                            node: pkg.engines.node,
+                            browsers: pkg.browserslist
+                        }
+                    ]
+                ]
+            }
+        },
 		exclude: /node_modules/
 	}];
 

@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "build": "npm run clean && npm run build-client && npm run build-server",
-        "build-client": "SET NODE_ENV=production SET BABEL_ENV=production && node -r babel-register node_modules/.bin/webpack --progress --display-modules --config webpack/webpack.config.client.js",
-        "build-server": "SET NODE_ENV=production SET BABEL_ENV=production && node -r babel-register node_modules/.bin/webpack --progress --config webpack/webpack.config.server.js",
+        "build-client": "SET NODE_ENV=production SET BABEL_ENV=production && node -r babel-register node_modules/webpack/bin/webpack.js --progress --display-modules --config webpack/webpack.config.client.js",
+        "build-server": "SET NODE_ENV=production SET BABEL_ENV=production && node -r babel-register node_modules/webpack/bin/webpack.js --progress --config webpack/webpack.config.server.js",
         "clean": "rimraf dist/ && rimraf public/app",
         "lint": "eslint src",
         "postmerge": "npm install",
